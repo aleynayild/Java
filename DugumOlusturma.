@@ -1,0 +1,47 @@
+
+public class Sınıf {
+ int sayi;
+ 
+ Sınıf next;//bu bizim göstericimiz,pointerımız
+ 
+}
+
+public class Ana {
+    public static void main(String[] args) {
+    	//Sınıf A;//null bellekte herhangi bir yer kaplamıyor,sadece referans veriyor.
+    	Sınıf A=new Sınıf();//bir tane nesne olusturduk.Bellekten yer ayırdım.
+    	Sınıf B = new Sınıf();//bellekte bir tane daha yer ayırdım.
+    	Sınıf C = new Sınıf();//yine yer ayırdım.ve ucunun de icleri su an bos yani null ve bu duugmler birbirne henuz baglı degiller.
+    	
+    	//bellekten yer ayırıyoruz o ayırdıgımız yerler biizm düğümlerimiz oluyor.
+    	
+    	A.sayi=11;//düğümlere değerlerini atıyoruz.
+    	B.sayi=22;
+    	C.sayi=33;
+    	 //düğümlerin değerlerini yazdırıyoruz.Burada kullandıgımız noktalar pointer mantıgı ile calısıyor.Pointer neydi ? Pointer bellekten yer ayırdıgımız "newlemistik" o yeri işaret eder.
+    	//Mesela A.sayi dedik, yani A bizim bellekte ayırdıgımız yeri ifade eder yani A bellekteki nesnenin adresini tutuyor. ve .sayi ile o nesnenin bir değişkenine erişiyoruz.O yeri sayi degiskeniyle işaret eder. 11 değerini göstermiş olur.
+    	
+    	/*System.out.println(A.sayi);
+    	System.out.println(B.sayi);
+    	System.out.println(C.sayi);*/
+    	
+    	A.next = B;//düğümleri birbirine bağlamış olduk, şu anda A düğümü B düğümünü gösteriyor.
+    	B.next= C;
+    	C.next = null;//C herhangi bir yeri göstermiyor.
+    
+    	//gecici olarak temple degerler tutulabilir burada tempin adı herhangi bir sey olabilir.
+    	Sınıf temp = A;
+    	
+    	
+    	//düğümlerin üzerinde gezinme
+        while(temp != null)//yanii tempte gecicici olarak tutulan değer nulla eşit olmadığı sürece kodun icinde gez null olunca da çık demek istedik.
+        {
+        	System.out.println(temp.sayi);
+        	temp = temp.next;
+        }
+
+
+    
+    
+    }
+}
