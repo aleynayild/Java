@@ -1,0 +1,21 @@
+
+public class uygulama {
+
+	public static void main(String[] args) {
+		
+		TekYonluListeYapisi tYList= new  TekYonluListeYapisi();
+		tYList.basaEkle(10);
+		tYList.basaEkle(5);
+		tYList.basaEkle(3);
+		tYList.sonaEkle(20);
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+
+}

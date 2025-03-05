@@ -1,0 +1,75 @@
+public class TekYonluListeYapisi {
+  Node head = null;//tek yonlu dogural listeye eleman ekleme yaparsam ilk elemanı head olarak adalndırılacak.
+  Node tail = null;
+  
+  void basaEkle(int x)
+  {//buradaki x basaekle metodu cagrılırken atanacak degeri temsil eder.
+	  
+	 Node eleman = new Node();
+	 eleman.data = x;
+	 
+	 if(head == null)//head nulla eşitlenmişse bir liste yapısı oluşturulmamıştır.Ve herhangi bir düğüm yoktur.	 
+	 {
+		 eleman.next=null;
+		 head = eleman;
+		 tail = eleman;
+		 System.out.println("liste yapisi olusturuldu ilk eleman eklendi");
+	 }
+	 else
+	 {
+		 eleman.next = head;
+	     head = eleman;
+	     System.out.println("basa eleman eklendi");
+	 }  
+  }
+  
+  
+  
+  void sonaEkle(int x)
+  {//buradaki x sonaekle metodu cagrılırken atanacak degeri temsil eder.
+	  
+	 Node eleman = new Node();
+	 eleman.data = x;
+	 
+	 if(head == null)//head nulla eşitlenmişse bir liste yapısı oluşturulmamıştır.Ve herhangi bir düğüm yoktur.	 
+	 {
+		 eleman.next=null;
+		 head = eleman;
+		 tail = eleman;
+		 System.out.println("liste yapisi olusturuldu ilk eleman eklendi");
+	 }
+	 else
+	 {  eleman.next = null;
+		tail.next=eleman;//ekleme yaptık
+		tail=eleman;//isim güncelliyoruz
+		System.out.println("sona eleman eklendi");
+	 }  
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+}

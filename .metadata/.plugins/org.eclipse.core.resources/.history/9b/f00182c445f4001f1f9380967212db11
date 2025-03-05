@@ -1,0 +1,19 @@
+
+public class Ana {
+    public static void main(String[] args) {
+    	//Sınıf nesne1;//null bellekte herhangi bir yerkaplamıyr
+    	Sınıf nesne1=new Sınıf();//bir tane nesne olusturduk.Bellekten yer ayırdım.
+    	Sınıf nesne2 = new Sınıf();//bellekte bir tane daha yer ayırdım.
+    	Sınıf nesne3 = new Sınıf();//yine yer ayırdım.ve ucunun de icleri su an bos yani null ve bu duugmler birbirne henuz baglı degiller.
+    	
+    	//bellekten yer ayırıyoruz ya hani o ayırdıgımız yerler biizm düğümlerimiz oluyor.
+    	
+    	nesne1.sayi=11;//düğümlere değerlerini atıyoruz.
+    	nesne2.sayi=22;
+    	nesne3.sayi=33;
+    	
+    	System.out.println(nesne1.sayi);
+    	System.out.println(nesne2.sayi);
+    	System.out.println(nesne3.sayi);
+    }
+}
